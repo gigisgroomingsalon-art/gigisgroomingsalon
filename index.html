@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gigi's Grooming Salon | Chorley</title>
+  <style>
+    :root {
+      --sage: #b9c2b0;
+      --dark-sage: #8f9a86;
+      --cream: #faf9f6;
+      --gold: #e6c75b;
+      --text: #2f2f2f;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 2.5rem 1rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header img {
+      max-width: 160px;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background: var(--sage);
+    }
+
+    nav a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 14px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--dark-sage);
+      font-size: 1.8rem;
+    }
+
+    .services ul {
+      columns: 2;
+      padding-left: 1.2rem;
+    }
+
+    .services li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      background: var(--gold);
+      color: #1f2937;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .cta:hover {
+      opacity: 0.9;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .review {
+      background: var(--cream);
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: white;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .services ul {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Gigi's Grooming Salon logo" />
+    <h1>Gigi's Grooming Salon</h1>
+    <p>Professional Dog Grooming in Chorley</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#booking">Book Now</a>
+  </nav>
+
+  <div style="position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:999;">
+    <a href="tel:07717524424" class="cta" style="text-align:center;">📞 Call</a>
+    <a href="https://wa.me/447717524424" class="cta" style="background:#25D366;">💬 WhatsApp</a>
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>About Gigi's</h2>
+      <p>
+        Gigi's Grooming Salon is a calm, friendly dog grooming salon based in Chorley.
+        We specialise in gentle, professional grooming tailored to your dog's individual
+        needs, ensuring every visit is a positive experience.
+      </p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Full Groom</li>
+        <li>Bath & Blow Dry</li>
+        <li>Nail Trimming</li>
+        <li>Puppy Grooming</li>
+        <li>De-shedding Treatments</li>
+        <li>Hand Stripping (where suitable)</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>A selection of our happy, freshly groomed dogs.</p>
+
+      <div class="reviews">
+        <img src="gallery1.jpg" alt="Dog grooming result" style="width:100%;border-radius:12px;" />
+        <img src="gallery2.jpg" alt="Dog grooming result" style="width:100%;border-radius:12px;" />
+        <img src="gallery3.jpg" alt="Dog grooming result" style="width:100%;border-radius:12px;" />
+        <img src="gallery4.jpg" alt="Dog grooming result" style="width:100%;border-radius:12px;" />
+      </div>
+
+      <p style="margin-top:1rem;"><em>Upload your favourite photos as gallery1.jpg, gallery2.jpg, etc.</em></p>
+    </section>
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <p>Live reviews from our Google Business profile.</p>
+
+      <!-- Elfsight Google Reviews Widget -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-ca952a02-e34e-4dca-b3ca-da4b3abee445" data-elfsight-app-lazy></div>
+    </section>
+
+    <section id="booking">
+      <h2>Book Now</h2>
+      <p>Use the form below to request an appointment. We’ll confirm by email or phone.</p>
+
+      <form action="mailto:gigisgroomingsalon@gmail.com" method="post" enctype="text/plain">
+        <p>
+          <label>Name<br />
+            <input type="text" name="Name" required style="width:100%;padding:0.6rem;" />
+          </label>
+        </p>
+        <p>
+          <label>Email<br />
+            <input type="email" name="Email" required style="width:100%;padding:0.6rem;" />
+          </label>
+        </p>
+        <p>
+          <label>Phone Number<br />
+            <input type="tel" name="Phone" style="width:100%;padding:0.6rem;" />
+          </label>
+        </p>
+        <p>
+          <label>Dog Breed & Size<br />
+            <input type="text" name="Dog" style="width:100%;padding:0.6rem;" />
+          </label>
+        </p>
+        <p>
+          <label>Preferred Date / Time<br />
+            <input type="text" name="Preferred Date" style="width:100%;padding:0.6rem;" />
+          </label>
+        </p>
+        <p>
+          <label>Notes<br />
+            <textarea name="Notes" rows="4" style="width:100%;padding:0.6rem;"></textarea>
+          </label>
+        </p>
+        <button class="cta" type="submit">Send Booking Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gigi's Grooming Salon · Chorley</p>
+    <div style="margin-top:1rem;display:flex;justify-content:center;gap:1.5rem;">
+      <a href="https://www.facebook.com/p/Gigis-Grooming-Salon-61572419580574/" target="_blank" aria-label="Facebook">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#4267B2" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/gigis_groomingsalon/" target="_blank" aria-label="Instagram">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#C13584" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.246-2.241-1.308-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.602.401 3.515 1.488 2.428 2.575 2.159 3.748 2.1 5.025.013 6.305 0 6.714 0 12c0 5.286.013 5.695.072 6.975.059 1.277.329 2.45 1.416 3.537 1.087 1.087 2.26 1.357 3.537 1.416C8.305 23.987 8.714 24 12 24s3.695-.013 4.975-.072c1.277-.059 2.45-.329 3.537-1.416 1.087-1.087 1.357-2.26 1.416-3.537.059-1.28.072-1.689.072-6.975 0-5.286-.013-5.695-.072-6.975-.059-1.277-.329-2.45-1.416-3.537C19.425.401 18.252.131 16.975.072 15.695.013 15.286 0 12 0z"/>
+          <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8z"/>
+          <circle cx="18.406" cy="5.594" r="1.44"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
